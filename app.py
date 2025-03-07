@@ -8,13 +8,13 @@ from google import genai
 import os
 
 # Your API keys (make sure to secure them in production!)
-PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
-GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
+PINECONE_API_KEY="pcsk_3otc4w_DdvWoFtzsyYgabEMqWnrnATWHK1dh3fBUR3YXABE47wUqHXb5CJnDaVJPuV2k2M"
+GEMINI_API_KEY="AIzaSyDBNILezgxR3qMjpQ5DGtapLhZJu_psZ58"
 STREAMLIT_INDEX_NAME = 'rag-demo'
 
 # Initialize Pinecone and SentenceTransformer
 pc = Pinecone(api_key=PINECONE_API_KEY)
-model = SentenceTransformer('all-mpnet-base-v2')
+model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
 
 # Load or generate embeddings
 pdf_path = 'experian_annual_report_2024_web.pdf'
