@@ -8,8 +8,8 @@ from google import genai
 import os
 
 # Your API keys (make sure to secure them in production!)
-PINECONE_API_KEY="pcsk_3otc4w_DdvWoFtzsyYgabEMqWnrnATWHK1dh3fBUR3YXABE47wUqHXb5CJnDaVJPuV2k2M"
-GEMINI_API_KEY="AIzaSyDBNILezgxR3qMjpQ5DGtapLhZJu_psZ58"
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 STREAMLIT_INDEX_NAME = 'rag-demo'
 
 # Initialize Pinecone and SentenceTransformer
